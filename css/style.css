@@ -1,3 +1,66 @@
-.icon {
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin-top: 10px;
+    padding: 0 20px;
+}
+.header nav {
+    display: flex;
+}
+.header nav a {
+    border: solid 1px;
+    display: flexbox;
+    padding: 10px;
+    border-radius: 2px;
+    margin: 0;
+}
+.banner {
+    margin-top: 50px;
+    background-color: bisque;
+    background-image: url('/img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 578px; 
+    width: 1366px;
+    line-height: 1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.banner h1 {
+    color:aliceblue;
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.banner h2 {
+    font-size: 80px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: black;
+}
+.banner p {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.content {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+}
+.content img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+.img1 {
+    display: flex;
+}
+.img2 {
+    display: flex;
+}
+.img3 {
     display: flex;
 }
