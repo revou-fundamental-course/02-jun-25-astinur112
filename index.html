@@ -4,9 +4,29 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Revou Mini Test</title>
+    <script>
+    function ValidateForm() {
+    var name = document.forms["message-form"]["name"].value;
+    var date = document.forms["message-form"]["date"].value;
+    var gender = document.forms["message-form"]["gender"].value;
+    var messages = document.forms["message-form"]["messages"].value;
+
+    if (name == "" || date == "" || gender =="" || messages == "") {
+        alert("Input cannot be empty");
+    return false;
+}
+
+document.getElementById("sender-name").innerText = name;
+document.getElementById("sender-date").innerText = date;
+document.getElementById("sender-gender").innerText = gender;
+document.getElementById("sender-messages").innerText = messages;
+
+}
+</script>
 </head>
 <body>
+    
     <div class="banner">
         <div class="overlay"></div>
         <div class="header">
@@ -19,66 +39,97 @@
             </nav>
         </div>
             <main>
-                <h1>Hi Harfi, Welcome To Revou!</h1>
+                <script>
+                    var name = prompt ("Enter your name");
+                    document.addEventListener("DOMContentLoaded", function () {
+                    document.getElementById("greeting").innerText = "Hi " + name + ", Welcome to Revou!";
+                    });
+                    </script>
+                <h1 id="greeting">Hi Harfi, Welcome To Revou!</h1>
                 <h2>#1 Professional Skilling Platform in Indonesia</h2>
                 <p1><i>Learn from the best teachers and upgrade your career with us!</i></p1> <br/>
             </main>
             <div class="new">
-                <p2><b>TRIAL CLASS</b></p2>
+                <a href="trial-class">TRIAL CLASS</a>
+                <!--<p2><b>TRIAL CLASS</b></p2>-->
             </div>
     </div>
     
     </div>
     <div class="page">
+        <section id="our-profile">
         <h1><b>Our Profile</b></h1>
+        </section>
         <div class="content">
         <div class="icon1">
-            <img src="img/teacher.jpg" alt="Our Teacher" width="100px" height="100px">
+            <img src="img/teacher.jpg" alt="Our Teacher" width="200px" height="200px">
             <p>Our Teacher</p>
         </div>
         <div class="icon2">
-            <img src="img/field.jpg" alt="Sports Field" width="100px" height="100px">
+            <img src="img/field.jpg" alt="Sports Field" width="200px" height="200px">
             <p>Sports Field</p>
         </div>
         <div class="icon3">
-            <img src="img/classroom.jpg" alt="Our Classroom" width="100px" height="100px">
+            <img src="img/classroom.jpg" alt="Our Classroom" width="200px" height="200px">
             <p>Our Classroom</p>
         </div>
         </div>
     </div>
        <div class="account">
+        <section id="achievement">
         <h1><b>Achievement</b></h1>
-        <div class="container">
-        <div class="img1">
-            <img src="img/teacher.jpg" alt="Our Teacher" width="100px" height="100px">
-            <p>Forbes 30 Under 30 Asia</p>
-        </div>
-        <div class="img2">
-            <img src="img/field.jpg" alt="Sports Field" width="100px" height="100px">
-            <p>Collaborations</p>
-        </div>
-        <div class="img3">
-            <img src="img/classroom.jpg" alt="Our Classroom" width="100px" height="100px">
-            <p>Product Innovations</p>
-        </div>
+        </section>
+            <div class="slider">
+                <div class="slider-track">
+                <img src="img/medal1.png" width="200px" height="200px">
+                <img src="img/medal2.png" width="200px" height="200px">
+                <img src="img/medal3.png" width="200px" height="200px">
+                <img src="img/medal4.png" width="200px" height="200px">
+                <img src="img/medal5.png" width="200px" height="200px">
+                <img src="img/medal6.png" width="200px" height="200px">
+                <img src="img/medal1.png" width="200px" height="200px">
+                <img src="img/medal2.png" width="200px" height="200px">
+                <img src="img/medal3.png" width="200px" height="200px">
+                <img src="img/medal4.png" width="200px" height="200px">
+                <img src="img/medal5.png" width="200px" height="200px">
+                <img src="img/medal6.png" width="200px" height="200px">
+                </div>
+            </div>
         </div>
     </div>
     <div class="bottom">
+        <section id="message-us">
         <h1><b>Message Us</b></h1>
-        <form action="" method="post">
-            <label for="name">Nama:</label>
-            <input id="name" type="text">
-            <br/>
-            <label for="date">Tanggal Lahir:</label>
-            <input id="date" type="date">
-            <br/>
-            <label for="gender">Jenis Kelamin:</label>
-            <input type="radio" name="gender" value="Laki-laki">Laki-laki
-            <input type="radio" name="gender" value="Perempuan">Perempuan
-            <br/>
-            <label for="text">Pesan</label>
-            <textarea rows="8" cols="64">Pesan:</textarea>
+        </section>
+        <p><i>Fill out the form now and let us be the solution you’ve been searching for.</i></p>
+        <div class="form">
+        <form name="message-form" action="" method="post" onsubmit="return ValidateForm();">
+            <label for="name">Name:</label><br>
+            <input id="name" name="name" type="text">
+            <br> <br>
+
+            <label for="date">Bith Date:</label></br>
+            <input id="date" name="birth-date" type="date">
+            <br><br>
+
+            <label>Gender:</label></br>
+            <div class="gender-group">
+                <label><input type="radio" name="gender" value="Male">Male</label>
+                <label><input type="radio" name="gender" value="Female">Female</label>
+            </div>
+
+            <br><br>
+            <label for="message">Message:</label></br>
+            <textarea id="messages" name="messages" rows="8" cols="64">Type here</textarea><br>
+            <input type="submit" value="SUBMIT">
+            
+            <h2>Form Output:</h2>
+                <p><strong>Name:</strong> <span id="sender-name"></span></p>
+                <p><strong>Birth Date:</strong> <span id="sender-birth-date"></span></p>
+                <p><strong>Gender:</strong> <span id="sender-gender"></span></p>
+                <p><strong>Message:</strong> <span id="sender-messages"></span></p>
         </form>
+        </div>
     </div>
     </main>
  
