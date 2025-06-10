@@ -41,7 +41,7 @@
 
 .banner {
     margin-top: 0px;
-    background-image: url("img/banner.jpg");
+    background-image: url("/img/banner.jpg");
     background-size: cover;
     background-position: center;
     height: 578px; 
