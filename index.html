@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css"
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revou Mini Test</title>
@@ -15,15 +15,15 @@
     if (name == "" || date == "" || gender =="" || messages == "") {
         alert("Input cannot be empty");
     return false;
-}
+    }      
 
-document.getElementById("sender-name").innerText = name;
-document.getElementById("sender-date").innerText = date;
-document.getElementById("sender-gender").innerText = gender;
-document.getElementById("sender-messages").innerText = messages;
+    document.getElementById("sender-name").innerText = name;
+    document.getElementById("sender-date").innerText = date;
+    document.getElementById("sender-gender").innerText = gender;
+    document.getElementById("sender-messages").innerText = messages;
 
-}
-</script>
+    }
+    </script>
 </head>
 <body>
     
@@ -40,20 +40,18 @@ document.getElementById("sender-messages").innerText = messages;
         </div>
         <section id="home">
             <main>
-                
                 <script>
                     var name = prompt ("Enter your name");
                     document.addEventListener("DOMContentLoaded", function () {
                     document.getElementById("greeting").innerText = "Hi " + name + ", Welcome to Revou!";
                     });
-                    </script>
+                </script>
                 <h1 id="greeting">Hi Harfi, Welcome To Revou!</h1>
                 <h2>#1 Professional Skilling Platform in Indonesia</h2>
-                <p1><i>Learn from the best teachers and upgrade your career with us!</i></p1> <br/>
+                <p><i>Learn from the best teachers and upgrade your career with us!</i></p> <br/>
             </main>
             <div class="new">
                 <a href="trial-class">TRIAL CLASS</a>
-                <!--<p2><b>TRIAL CLASS</b></p2>-->
             </div>
         </section>
     </div>
@@ -111,7 +109,7 @@ document.getElementById("sender-messages").innerText = messages;
             <input id="name" name="name" type="text">
             <br> <br>
 
-            <label for="date">Bith Date:</label></br>
+            <label for="date">Birth Date:</label></br>
             <input id="date" name="birth-date" type="date">
             <br><br>
 
@@ -126,6 +124,9 @@ document.getElementById("sender-messages").innerText = messages;
             <textarea id="messages" name="messages" rows="8" cols="64">Type here</textarea><br>
             <input type="submit" value="SUBMIT">
             
+            </form>
+
+
             <!--<h2>Form Output:</h2>
                 <p><strong>Name:</strong> <span id="sender-name"></span></p>
                 <p><strong>Birth Date:</strong> <span id="sender-birth-date"></span></p>
@@ -135,6 +136,6 @@ document.getElementById("sender-messages").innerText = messages;
         </div>
     </div>
     </main>
- 
+
 </body>
 </html>

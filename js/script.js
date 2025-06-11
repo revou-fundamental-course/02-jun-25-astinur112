@@ -1,3 +1,4 @@
+
 var name = prompt ("Enter your name");
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("greeting".innerText = "Hi" + name + ", Welcome to Revou!";
@@ -11,7 +12,6 @@ function ValidateForm() {
 
     if (name == "" || date == "" || gender =="" || messages == "") {
         alert("Input cannot be empty");
-    return false;
 }
 
 document.getElementById("sender-name").innerText = name;
@@ -20,3 +20,24 @@ document.getElementById("sender-gender").innerText = gender;
 document.getElementById("sender-messages").innerText = messages;
 
 }
+
+document.getElementById("message-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const sender = document.getElementById("sender").value;
+    document.getElementById("output").textContent = "Name: " + name;
+  });
+ocument.getElementById("message-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const sender = document.getElementById("sender").value;
+    document.getElementById("output").textContent = "Birth Date: " + birth-date;
+  });
+ocument.getElementById("message-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const sender = document.getElementById("sender").value;
+    document.getElementById("output").textContent = "Gender: " + gender;
+  });
+ocument.getElementById("message-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const sender = document.getElementById("sender").value;
+    document.getElementById("output").textContent = "Message: " + messages;
+  });
